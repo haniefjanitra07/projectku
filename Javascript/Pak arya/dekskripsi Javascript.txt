@@ -1,0 +1,5 @@
+1. js adalah bahasa pemrograman untuk website
+fungsinya untuk membuat interaksi didalam
+sebuah halaman web.
+2. css adalah tampilan atau style dari sebuah web
+3. html adalah kontenn atau struktur website

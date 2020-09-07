@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>belajar Click di jQuery</title>
+</head>
+<body>
+	<input type="text" name="kota" id="city">
+	<script src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			let no = 1;
+			$("#city").click(function(e) {
+				// no+=1;
+				console.log(no);
+				no++
+			});
+		});
+	</script>
+</body>
+</html>

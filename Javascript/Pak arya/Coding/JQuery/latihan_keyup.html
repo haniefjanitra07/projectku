@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan keyup di jQuery</title>
+</head>
+<body>
+	
+	<input type="text" id="a" size="7" placeholder="10">
+	<input type="text" id="aritmatika" size="7" placeholder="+ - / *">
+	<input type="text"  id="b" size="7" placeholder="10">
+	<div id="tampil"></div>
+	<script src="js/jquery-3.4.1.min.js"></script>	
+<!-- 	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#b').keyup(function(e) {
+			let a = parseInt($('#a').val());
+			let arit = $('#aritmatika').val();
+			let b = parseInt($('#b').val());	
+
+			if (b) {
+				if (arit == '+') $('#tampil').text('Hasil : ' + (a + b));
+				if (arit == '-') $('#tampil').text('Hasil : ' + a - b);
+				if (arit == '/') $('#tampil').text('Hasil : ' + a / b);
+				if(arit == '*') $('#tampil').text('Hasil : ' + a * b);
+			}
+			else{
+				$('#tampil').text('');
+	
+			}
+
+			});
+	
+		});
+
+	</script> -->
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#b').keyup(function(e) {
+			let a1 = parseInt($('#a').val());
+			let arit = $('#aritmatika').val();
+			let a2 = parseInt($('#b').val());
+
+			if (arit == '*') {
+				$('#tampil').text('Hasil : ' + a1 * a2);	
+			}
+
+			else if(arit == '+'){
+				$('#tampil').text('Hasil : ' + (a1 + a2));
+			}
+
+			else if(arit == '-'){
+				$('#tampil').text('Hasil : ' + (a1 - a2));
+			}
+
+			else if(arit == '/'){
+				$('#tampil').text('Hasil : ' + a1 / a2);
+			}
+
+			});
+	
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar click dan form di jQuery</title>
+</head>
+<body>
+	<input type="text" id="warna" placeholder="blue, green, red....">
+	<button>Proses</button>
+	<script src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		// $(document).ready(function (event) {
+		// 	$('button').on('click', function (event) {
+		// 		event.preventDefault();
+		// 		let n = $('#nama').val();
+		// 		alert(n);
+		// 	});
+		// });
+
+			$(document).ready(function(event) {
+				$('button').on('click', function(event) {
+					event.preventDefault();
+					let warna = $('#warna').val();
+				$('body').css('background-color', warna);
+				});
+			});
+	</script>
+</body>
+</html>

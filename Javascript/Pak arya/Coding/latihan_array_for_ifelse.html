@@ -1,0 +1,39 @@
+<!-- buatlah sebuah variable dengan nilai array, yaitu bulan. -->
+<!-- lalu cetak-lah variable tersebut dengan for, dan formatnya tag select -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<select id="data">
+	</select>
+	<button id="tombol">Submit</button>
+	<script type="text/javascript">
+		//tambah value
+		let bulan = ['January', 'February', 'Maret', 'April', 'Mei', 'Juni', 'July', 'August', 'September', 'October', 'November', 'December']
+		let row = "";
+		row += "<option value=''>Pilih bulan lahir kamu</option>";
+
+		let opt = document.getElementById('data');
+
+		for (let i = 0, l = 12; i < 12; i++) {
+			row+= "<option value='" + bulan[i] + "'>" + bulan[i] + "</option>";
+			let a = i;
+		}
+		opt.innerHTML = row;
+		const submit = document.getElementById('tombol');
+		document.getElementById('tombol').addEventListener("click", validationSelect);
+		function validationSelect() {
+			
+			var bln = document.getElementById("data").value;
+
+			if (bln) {
+			alert("Kamu memilih bulan " + bln);
+			}  else {
+			alert("bulan wajib dipilih!");
+			}
+		}
+	</script>
+</body>
+</html>

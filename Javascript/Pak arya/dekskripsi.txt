@@ -1,0 +1,26 @@
+1. js adalah bahasa pemrograman untuk website
+fungsinya untuk membuat interaksi didalam
+sebuah halaman web.
+2. css adalah tampilan atau style dari sebuah web
+3. html adalah kontenn atau struktur website
+
+yang bisa dilakukan js:
+1. js mampu merubah konten HTML
+2. js mampu merubah nilai atau value dari atribut HTML
+3. js mampu merubah style/CSS dari HTML
+4. js mampu menyembunyikan konten HTML
+5. js mampu menampilkan konten HTML
+6. js mampu membuat animasi
+
+dimana js diletakan:
+1. didalam tag <script>
+2. didalam tag <html>
+3. didalan tag <head>
+4. didalam tag <body>
+
+js dapat mencetak output dengan beberapa cara:
+1. dengan document.write()
+2. dengan alert().
+3. dengan console.log().
+
+   NB: fungsi memiliki ciri2, yaitu ada buka kurung dan tutup kurung.

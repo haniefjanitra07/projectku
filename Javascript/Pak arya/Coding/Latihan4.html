@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Belajar Style di JavaScript</title> 
+</head> 
+<body> 
+    <div id="box"> 
+        <h1 id="heading">Change or reset your password</h1> 
+        <p id="tagline">You can change your password for security reasons or reset it if you forget it.</p> 
+        <input type="text" id="email" placeholder="Type your E-mail here ...">
+        <div id="msg"></div> 
+        <button id="button">Reset Password</button> 
+    </div>
+
+    <script type="text/javascript"> 
+        var box = document.getElementById("box"); 
+        var heading = document.getElementById("heading"); 
+        var tagline = document.getElementById("tagline");
+        var msg = document.getElementById("msg"); 
+        var email = document.getElementById("email"); 
+        var button = document.getElementById("button"); 
+
+        document.body.style.fontFamily = "calibri"; 
+        document.body.style.backgroundImage = "url('Wallpaper.jpg')"; 
+        document.body.style.backgroundSize = "100%"; 
+        document.body.style.backgroundRepeat = "fixed"; 
+
+        box.style.border = "2px solid #73ABFE"; 
+        box.style.padding = "35px"; 
+        box.style.borderRadius = "3px"; 
+        box.style.width = "577px"; 
+        box.style.display = "block"; 
+        box.style.marginTop = "125px"; 
+        box.style.marginLeft = "auto"; 
+        box.style.marginRight = "auto"; 
+        box.style.backgroundColor = "#73ABFE"; 
+        box.style.boxShadow = "1px 1px 1px #73ABFE"; 
+
+        heading.style.color = "#FFFFFF"; 
+        heading.style.marginTop = "0px"; 
+        heading.style.marginBottom = "0px"; 
+        heading.style.fontSize = "45px"; 
+
+        tagline.style.marginTop = "0px"; 
+        tagline.style.color = "#FAFAFA"; 
+        tagline.style.fontSize = "18px"; 
+
+        email.style.fontFamily = "calibri"; 
+        email.style.padding = "13px"; 
+        email.style.display = "block"; 
+        email.style.borderRadius = "3px"; 
+        email.style.border = "1px solid #CED4DA"; 
+        email.style.width = "400px"; 
+        email.style.fontSize = "25px"; 
+        email.style.marginTop = "35px"; 
+
+        button.style.fontFamily = "calibri"; 
+        button.style.color = "#FFFFFF"; 
+        button.style.backgroundColor = "#4FC08D"; 
+        button.style.border = "#4FC08D"; 
+        button.style.padding = "10px"; 
+        button.style.fontSize = "25px"; 
+        button.style.borderRadius = "3px"; 
+        button.style.display = "block"; 
+        button.style.marginTop = "8px"; 
+
+        button.addEventListener("click", resetPassword); 
+
+        function resetPassword()  
+        { 
+        	if(email.value == "") {
+        		email.style.border = "1px solid #F44336";
+
+        		msg.style.border = "1px solid #F44336";
+        		msg.style.color = "#FFFFFF";
+        		msg.style.padding = "13px";
+        		msg.style.display = "block";
+        		msg.style.borderRadius = "1px";
+        		msg.style.width = "400px";
+        		msg.style.fontSize = "18px";
+        		msg.style.marginTop = "5px";
+        		msg.style.backgroundColor = "#F44336";
+        		msg.innerHTML = "The E-mail is Required"
+        	} else {
+        		email.style.border = "1px solid #CED4DA";
+
+        		msg.style.border = "1px solid #309568";
+        		msg.style.color = "#FFFFFF";
+        		msg.style.padding = "13px";
+        		msg.style.display = "block";
+        		msg.style.borderRadius = "1px";
+        		msg.style.width = "400px";
+        		msg.style.fontSize = "18px";
+        		msg.style.marginTop = "5px";
+        		msg.style.backgroundColor = "#309568";
+        		msg.innerHTML = "Your E-mail " +email.value;
+        		email.value = "";
+        	}
+        } 
+    </script> 
+</body> 
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Daftar Murid Baru</title>
+	<style type="text/css">
+		body {
+			font-family: arial;
+		}
+		span {
+			color: #FC3908;
+			font-size: 9px;
+			font-style: italic;
+		}
+		span#output {
+			color: #20B911;
+			font-size: 9px;
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+		<table>
+			<tr>
+				<td valign="top">Nama depan</td>
+				<td valign="top">:</td>
+				<td valign="top">
+				<input type="text" id="nama_depan">
+				<br>
+				<span id="pesan_error_depan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top">Nama belakang</td>
+				<td valign="top">:</td>
+				<td valign="top">
+				<input type="text" id="nama_belakang">
+				<br>
+				<span id="pesan_error_belakang"></span>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top"></td>
+				<td valign="top"></td>
+				<td valign="top">
+				<input type="submit" onclick="simpan();" value="Simpan">
+				<span id="output"></span>
+				</td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			function simpan() {
+				//console.log('Output dari tombol simpan');
+				var nama_depan           = document.getElementById('nama_depan').value;
+				var nama_belakang        = document.getElementById('nama_belakang').value;
+				var pesan_error_depan    = 'Nama depan wajib diisi';
+				var pesan_error_belakang = 'Nama belakang wajib diisi';
+				var output               = '<br> Nama depan : ' + nama_depan + '<br> Nama belakang : ' + nama_belakang;
+			
+			if (nama_depan == '' && nama_belakang == '') {
+				document.getElementById('pesan_error_depan').innerHTML = pesan_error_depan;
+				document.getElementById('pesan_error_belakang').innerHTML = pesan_error_belakang;
+			}
+			else if (nama_depan == '' && nama_belakang != ''){
+				document.getElementById('pesan_error_depan').innerHTML = pesan_error_depan;
+				document.getElementById('pesan_error_belakang').innerHTML = '';
+			}
+			else if (nama_depan != '' && nama_belakang == ''){
+				document.getElementById('pesan_error_depan').innerHTML = '';
+				document.getElementById('pesan_error_belakang').innerHTML = pesan_error_belakang;
+			}
+			else {
+				document.getElementById('output').innerHTML = output;
+				document.getElementById('pesan_error_depan').innerHTML = '';
+				document.getElementById('pesan_error_belakang').innerHTML = '';
+			}
+		}
+		</script>
+</body>
+</html>

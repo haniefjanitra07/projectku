@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan hide dan show di jQuery</title>
+	<script src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('input').keyup(function () {
+				let kotak = $(this).val();
+				if (kotak == 'hide') {
+					$('div').hide('slow');
+				}
+				else if(kotak == 'show'){
+					$('div').show('slow');
+
+				}
+			});
+
+		});
+	</script>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height: 200px;
+			margin: 50px auto;
+			background-color: purple;
+			border: 2px solid salmon;
+		}
+		input {
+			width: 200px;
+			height: 50px;
+			margin: 50px auto;
+			background-color: purple;
+			border: 2px solid salmon;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<input type="text">
+	<div></div>
+</body>
+</html>

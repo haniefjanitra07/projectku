@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Daftar murid baru</title>
+	<style type="text/css">
+		body {
+			font-family: arial;
+		}
+		input {
+			border: 1px solid #BBBBBB;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h3>Register</h3>
+	<form name="f" onsubmit="return register(event);">
+		<input type="text" name="fullname" placeholder="fullname">
+		<input type="password" name="password" placeholder="password">
+		<input type="submit" name="save" value="Save">
+		<span id="print"></span>
+	</form>
+	<script type="text/javascript">
+		function register(event) {
+			event.preventDefault();
+			var nama_lengkap = document.f.fullname.value;
+			var password     = document.f.password.value;
+
+			if (nama_lengkap == '') {
+				alert('fullname is required');
+				document.f.fullname.focus();
+				return false;
+			}
+			else if (nama_lengkap.length < 4) {
+				alert('Fullname must be at least 4 characters long!');
+				document.f.fullname.focus();
+				return false;
+			}
+			else if (nama_lengkap.length > 20) {
+				alert('Fullname max 20 characters long!');
+				document.f.fullname.focus();
+				return false;
+			}
+			else if (password == '') {
+				alert('password is required');
+				document.f.password.focus();
+				return false;
+			}
+			else {
+				alert('Successfully!');
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>

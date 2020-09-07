@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar Animate di jQuery</title>
+	<script src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('div').animate({left : '40%'}, 500)
+					.animate({top : '40%'}, 500)
+					.animate({left : '-=40%'}, 500)
+					.animate({top : '-=40%'}, 500)
+
+
+		});
+	</script>
+	<style type="text/css">
+		div {
+			width: 170px;
+			height: 170px;
+			position: absolute;
+			background-color: purple;
+			border: 2px solid salmon;
+		}
+		
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

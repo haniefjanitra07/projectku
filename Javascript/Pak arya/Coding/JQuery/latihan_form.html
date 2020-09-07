@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan form validation di jQuery</title>
+	<style type="text/css">
+		span{
+				color: red;
+		}
+	</style>
+</head>
+<body>
+	
+	<input type="text" id="input"> <br>
+	<div id="tampil"></div>
+	<input type="submit" value="Login" id="login"> <br>
+	<script src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#login').on('click', function(event) {
+				event.preventDefault();
+				let tampil = $('#input').val();
+				let o = "<span>Username wajib diisi!</span>"
+				if (tampil) {
+					$('#tampil').html('Username: ' + tampil);
+					$("#input").val("");
+				} 
+				else {
+					$('#tampil').html(o);
+
+				}
+			});
+		});
+
+	</script>
+</body>
+</html>

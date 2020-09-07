@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>belajar Click dan CSS di jQuery</title>
+</head>
+<body>
+	<button id="r">R</button>
+	<button id="g">G</button>
+	<button id="b">B</button>
+	<button id="reset">Reset</button>
+	<script src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#r').click(function(event) {
+				$('body').css('background-color', '#E2000D')
+			}); 
+
+			$("#g").click(function(event) {
+				$('body').css('background-color', '#2DCD10')
+			});
+
+			$("#b").click(function(event) {
+				$('body').css('background-color', '#0B5AF8')
+			});
+
+			$("#reset").click(function(event) {
+				$('body').css('background-color', '#FFF')
+			});
+		});
+	</script>
+</body>
+</html>

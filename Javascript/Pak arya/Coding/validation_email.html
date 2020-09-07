@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS - Email validation</title>
+</head>
+<body>
+	<input type="text" id="email">
+	<input type="submit" id="email" value="Check" onclick="save();">
+	<script type="text/javascript">
+		function save() {
+			//RUMUS VALIDASI EMAIL
+			var format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+			//MENANGKAP ELEMENT TEXT EMAIL
+			var email = document.getElementById('email').value;
+
+			//CEK APAKAH FORMAT EMAIL BENAR
+			if (email.match(format)) { /*match adalah salah satu fungsi di js yang berguna melakukan pengecekan sebuah string, apakah nilainya sama atau tidak dalam format reg-ex (regular expression).*/
+				alert("Email kamu benar.");
+			}
+			//JIKA FORMAT EMAIL SALAH
+			else {
+				alert("Email kamu salah.");
+				return false;
+			}
+
+		}
+	</script>
+</body>
+</html>

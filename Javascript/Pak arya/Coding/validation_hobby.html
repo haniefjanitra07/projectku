@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS - Checkbox validation</title>
+</head>
+<body>
+	<form>
+	<input type="checkbox" name="hobbies" value="Programming"> Programming <br>
+	<input type="checkbox" name="hobbies" value="Reading"> Reading <br>
+	<input type="checkbox" name="hobbies" value="Swimming"> Swimming <br>
+	<input type="checkbox" name="hobbies" value="Traveling"> Traveling <br>
+	<input type="checkbox" name="hobbies" value="Watching"> Watching <br>
+	<button type="button" onclick="check(this.form)" ><a href="#">Submit</a></button>
+	</form>
+	<span id="show"></span>
+	<script>
+		function check(frm) {
+			var selectedhobby = "";
+			for (i = 0; i < frm.hobbies.length; i++) {
+				if (frm.hobbies[i].checked) {
+					selectedhobby += frm.hobbies[i].value + ", ";
+				}
+			}
+
+			if (selectedhobby == "") {
+				alert("Silahkan pilih hobby kamu!");
+				return false;
+			}
+			else {
+				document.getElementById('show').innerHTML = "Hobi kamu adalah " + selectedhobby.replace(/,\s*$/, "");
+
+			}
+		}
+	</script>
+</body>
+</html>

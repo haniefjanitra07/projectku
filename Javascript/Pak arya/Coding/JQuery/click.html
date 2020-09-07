@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>belajar Click di jQuery</title>
+</head>
+<body>
+	<button>Klik Tombol Ini</button>
+	<script src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button").on('dblclick', function(event) {
+				event.preventDefault();
+				$(this).hide();
+			});
+		});
+	</script>
+</body>
+</html>

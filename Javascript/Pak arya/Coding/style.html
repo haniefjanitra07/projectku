@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar Style di JavaScript</title>
+</head>
+<body>
+	<h1 id="heading">Belajar Style di JavaScript</h1>
+	<button id="tombol">Ubah tulisan menjadi huruf kapital</button>
+	<script type="text/javascript">
+		document.body.style.backgroundColor = "#F44336";
+
+		var title = document.getElementById('heading');
+		var btn = document.getElementById('tombol');
+		var text = "belajar Style di JavaScript";
+
+		title.innerHTML = text;
+
+		//style untuk id heading
+		title.style.color = '#FFFFFF';
+		title.style.fontFamily = 'calibri';
+		title.style.fontSize = '50px';
+		title.style.marginTop = '100px';
+		title.style.textAlign = 'center';
+
+		//style untuk id tombol
+		btn.style.backgroundColor = '#1E1E1E';
+		btn.style.color = '#FFFFFF';
+		btn.style.border = '#1E1E1E';
+		btn.style.borderRadius = '8px';
+		btn.style.padding = '10px';
+		btn.style.fontSize = '20px';
+		btn.style.display = 'block';
+		btn.style.marginLeft = 'auto';
+		btn.style.marginRight = 'auto';
+		btn.style.boxShadow = '1px 1px 1px #1E1E1E';
+
+		btn.addEventListener("click", updateText);
+
+		function updateText() 
+		{
+			title.innerHTML = text.toUpperCase();
+		}
+	</script>
+</body>
+</html>

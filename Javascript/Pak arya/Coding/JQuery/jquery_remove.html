@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar jQuery Remove</title>
+	<style>
+		button{
+			margin: 30px 0 0 30px;
+			font-family: verdana;
+			padding: 10px 20px;
+			background-color: #15aafb;
+			border: 1px solid #1397fe;	
+			font-size: 20px;
+			color: #fff;
+
+		}
+
+		button:hover{
+			background-color: #1397fe;	
+			border: 1px solid #0069f9;
+			cursor: pointer;
+
+		}
+
+		#content {
+			margin: 30px;
+			border: 3px solid #197e7e;
+			padding: 10px;
+			background-color: #c9ff0b;
+		}
+	</style>
+</head>
+<body>
+	<button>Remove</button>
+	<div id="content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam possimus in fuga voluptates necessitatibus autem corrupti adipisci assumenda, sit quisquam unde voluptate incidunt obcaecati animi harum, ad ab vitae perferendis.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quod totam necessitatibus tempora natus quasi, vero modi delectus eius consectetur! Quasi quas repellendus, assumenda odio natus animi! Porro, dolor, facere!</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nam aliquid voluptatem dolorem, ratione nobis at. Aliquam suscipit itaque, eaque iure at possimus enim non modi autem vel quam placeat.</p>
+	</div>
+	<script src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function (e) {
+			$('button').click(function (e) {
+				$('#content').remove();
+			});
+		});
+	</script>
+</body>
+</html>

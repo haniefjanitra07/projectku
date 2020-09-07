@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar jQuery Load</title>	
+</head>
+<body>
+	<button>Load Data From Another File</button>
+	<div></div>
+	<script src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('button').click(function (e) {
+				$('div').load('my_name.txt', function (e) {
+					alert("hai");
+				});
+			});
+		});
+	</script>
+</body>
+</html>

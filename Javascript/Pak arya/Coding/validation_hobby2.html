@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>JS - Checkbox Validation</title> 
+</head> 
+<body> 
+    <input type="checkbox" name="hobbies" value="Coding"> Coding <br> 
+    <input type="checkbox" name="hobbies" value="Programming"> Programming <br> 
+    <input type="checkbox" name="hobbies" value="Reading"> Reading <br> 
+    <input type="checkbox" name="hobbies" value="Swimming"> Swimming <br> 
+    <input type="checkbox" name="hobbies" value="Traveling"> Traveling <br> 
+    <input type="checkbox" name="hobbies" value="Watching"> Watching <br> 
+    <input type="submit" id="submit" value="Check" onclick="check();"> 
+    <p id="message"></p> 
+    <script type="text/javascript"> 
+        function check() { 
+            var r = document.querySelectorAll("input[name='hobbies']:checked");
+            var s = document.getElementsByName("hobbies");
+            var m = document.getElementById("message");
+             
+            var output = ""; 
+
+            if (r.length > 0) { 
+                for (var i = 0, l = 6; i < l; ++i) { 
+                    if (s[i].checked == true) { 
+                        output += s[i].value + ", "; 
+                    }                     
+                } 
+
+                m.innerHTML = "Hobi kamu adalah " + output.replace(/,\s*$/, ""); // REMOVE LAST COMMA 
+            } else { 
+                alert("Kamu Belum Memilih Hobi."); 
+            } 
+        } 
+    </script> 
+</body> 
+</html>
+
+

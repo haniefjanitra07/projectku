@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan keyup di jQuery</title>
+</head>
+<body>
+	
+	<input type="text" id="deskripsi">
+	<div id="tampil"></div>
+	<script src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#deskripsi').keyup(function(e) {
+			let data = $(this).val();
+			$('body').css('background-color', data);
+			// console.log(data);
+
+			});
+		});
+
+	</script>
+</body>
+</html>

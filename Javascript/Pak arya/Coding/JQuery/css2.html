@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>belajar Click dan CSS di jQuery</title>
+	<style type="text/css">
+		#kotak {
+			width: 200px;
+			height: 200px;
+			background-color: #CE00D1;
+			margin: 30px auto; 
+			}
+		#center{
+			display: flex;
+			justify-content: center;
+		}	
+		button{
+			padding: 15px;
+			font-size: 15px;
+		}
+		</style>
+</head>
+<body>
+	<div id="kotak"></div>
+	<div id="center">
+	<button id="perbesar">Perbesar</button>
+	<button id="perkecil">Perkecil</button>
+	<button id="reset">Reset</button>
+	</div>
+	<script src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#perbesar').click(function (e) {
+				$('#kotak').css('width', '300px');
+				$('#kotak').css('height', '300px');
+			});
+			$('#perkecil').click(function (e) {
+				$('#kotak').css('width', '100px');
+				$('#kotak').css('height', '100px');
+			});
+			$('#reset').click(function (e) {
+				$('#kotak').css('width', '200px');
+				$('#kotak').css('height', '200px');
+			});
+		});
+	</script>
+</body>
+</html>

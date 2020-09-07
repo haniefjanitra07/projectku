@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project ~ Muhamad Khafidh Fuadi</title>
+<style type="text/css">
+body {
+	font-family: arial;
+	margin-left: 80px;
+	margin-right: 80px;
+}
+ul {
+	margin-top: 20px;
+	padding: 30px;
+	padding-bottom: 150px;
+	list-style: none;
+	line-height: 25px;
+}
+header {
+	background-color: #5D5858;
+	text-align: center;
+	font-size: 30px;
+	margin-top: 80px;
+	padding: 50px;
+	color: white;
+}
+nav {
+	float: left;
+	background-color: #B8B2B2;
+	padding-right: 73px;
+}
+footer {
+	background-color: #5D5858;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 10px;
+	padding: 15px;
+	color: white;
+}
+#content {
+	margin-left: 220px;
+	margin-top: 30px;
+	margin-bottom: 130px;
+}
+</style>
+</head>
+<body>
+	<header>CITIES</header>
+
+	<nav>
+		<ul>
+			<li><a href="#" onclick="london();">London</a></li>
+			<li><a href="#" onclick="paris();">Paris</a></li>
+			<li><a href="#" onclick="tokyo();">Tokyo</a></li>
+		</ul>
+	</nav>
+
+	<div id="content">
+	<h1>London</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+
+	<footer>
+		<p>Footer</p>
+	</footer>
+	<script type="text/javascript">
+		function london() {
+			document.getElementById('content').innerHTML = '<h1>London</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'}
+		function paris() {
+			document.getElementById('content').innerHTML = '<h1>Paris</h1><p>ParisLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+		}
+		function tokyo() {
+			document.getElementById('content').innerHTML = '<h1>Tokyo</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+		}
+	</script>
+</body>
+</html>
+
+
+
